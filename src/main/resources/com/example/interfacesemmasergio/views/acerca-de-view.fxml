@@ -19,6 +19,9 @@
       <Label fx:id="labelNombre" />
       <Label fx:id="labelEdad" />
       <Label fx:id="labelEmail" />
-      <ImageView fx:id="imageViewAboubakar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageViewAboubakar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></ImageView>
    </children>
 </VBox>
