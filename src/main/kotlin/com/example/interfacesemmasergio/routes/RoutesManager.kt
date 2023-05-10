@@ -36,7 +36,7 @@ object RoutesManager {
 
     fun initAcercaDeStage() {
         val fxmlLoader = FXMLLoader(AlumnosApplication::class.java.getResource(Vistas.ACERCA_DE.ruta))
-        val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
+        val scene = Scene(fxmlLoader.load(), 320.0, 350.0)
         val stage = Stage()
         stage.initModality(Modality.APPLICATION_MODAL)
         stage.title = "Acerca de"
