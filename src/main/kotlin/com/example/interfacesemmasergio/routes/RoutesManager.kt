@@ -4,8 +4,11 @@ import com.example.interfacesemmasergio.AlumnosApplication
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
+import javafx.scene.image.Image
 import javafx.stage.Modality
 import javafx.stage.Stage
+import java.io.InputStream
+import java.net.URL
 
 object RoutesManager {
     private lateinit var mainStage: Stage
@@ -22,6 +25,7 @@ object RoutesManager {
         val fxmlLoader = FXMLLoader(AlumnosApplication::class.java.getResource(Vistas.MAIN.ruta))
         val scene = Scene(fxmlLoader.load(), 320.0, 240.0)
         stage.title = "Aplicación Alumnos"
+        stage.icons.add(Image(this.getResourceAsStream("images/iesluisvives.png")))
         stage.scene = scene
         stage.isResizable = false
 
@@ -41,5 +45,15 @@ object RoutesManager {
 
         _activeStage = stage
         activeStage.show()
+    }
+
+    fun getResource(resource: String): URL {
+        return app::class.java.getResource(resource)
+            ?: throw RuntimeException("No se ha encontrado el recurso: $resource")
+    }
+
+    fun getResourceAsStream(resource: String): InputStream {
+        return app::class.java.getResourceAsStream(resource)
+           ?: throw RuntimeException("No se ha encontrado el recurso: $resource")
     }
 }
