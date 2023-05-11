@@ -26,6 +26,6 @@ class AcercaDeController {
         labelNombre.text = AlumnoState.nombre
         labelEdad.text = AlumnoState.edad
         labelEmail.text = AlumnoState.email
-        imageViewAboubakar.setImage(Image(RoutesManager.app::class.java.getResource("images/aboubakar.jpg").toExternalForm()))
+        imageViewAboubakar.setImage(Image(RoutesManager.getResource("images/aboubakar.jpg").toExternalForm()))
     }
 }
