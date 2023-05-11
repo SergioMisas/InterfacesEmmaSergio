@@ -40,6 +40,7 @@ object RoutesManager {
         val stage = Stage()
         stage.initModality(Modality.APPLICATION_MODAL)
         stage.title = "Acerca de"
+        stage.icons.add(Image(this.getResourceAsStream("images/iesluisvives.png")))
         stage.scene = scene
         stage.isResizable = false
 
